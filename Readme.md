@@ -44,9 +44,6 @@ sudo pip3 install mysql-connector-python
 sudo pip3 install pytest  
 sudo pip3 install requests  
 
-Or:
-sudo pip3 install -r requirements.txt
-
 For more details please follow:  
 https://pypi.org/project/Flask/  
 https://pypi.org/project/mysql-connector-python/  

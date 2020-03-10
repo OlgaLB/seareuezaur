@@ -54,7 +54,7 @@ https://flask-cors.readthedocs.io/en/latest/
 ## Endpoints
 
 To search by IATA use the following endpoint:  
-### /api/IATA'  
+### /api/IATA
 method: 'GET'  
 input parameter: iata  
 output parameter: array of jsons  
@@ -62,7 +62,7 @@ Example:
 http://127.0.0.1:5000/api/IATA?iata=oca  
 
 To search by name use the following endpoint:  
-### /api/name'  
+### /api/name
 method: 'GET'  
 input parameter: name  
 output parameter: array of jsons  

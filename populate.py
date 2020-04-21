@@ -2,8 +2,6 @@
 
 import csv
 
-import os
-
 from lib.credentials import Connection
 import mysql.connector
 

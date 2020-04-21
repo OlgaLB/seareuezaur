@@ -2,18 +2,12 @@
 
 from lib.credentials import Connection
 from flask import Flask, request, json, jsonify
-from flask_cors import CORS
-from populate import populate_table
-import os
 import mysql.connector
 
 from lib.airport import Airport
 
 
 app = Flask(__name__)
-
-CORS(app)
-
 
 
 @app.route('/api/IATA', methods=['GET'])

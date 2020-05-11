@@ -37,7 +37,15 @@ def IATA_search():
     if airports_data is not None:
         for record in airports_data:
             airport = Airport(record[0], record[1], record[2], record[3], record[4], record[5], record[6])
-            found_airports.append({'name':airport.name, 'iata': airport.iata, 'icao': airport.icao, 'city':  airport.city, 'country':airport.country, 'latitude': airport.latitude, 'longitude': airport.longitude})
+            found_airports.append({
+                'name':airport.name, 
+                'iata': airport.iata, 
+                'icao': airport.icao, 
+                'city':  airport.city, 
+                'country':airport.country, 
+                'latitude': airport.latitude, 
+                'longitude': airport.longitude
+            })
 
     cursor.close()
     conn.close()
@@ -72,7 +80,15 @@ def name_search():
     if airports_data is not None:
         for record in airports_data:
             airport = Airport(record[0], record[1], record[2], record[3], record[4], record[5], record[6])
-            found_airports.append({'name':airport.name, 'iata': airport.iata, 'icao': airport.icao, 'city':  airport.city, 'country':airport.country, 'latitude': airport.latitude, 'longitude': airport.longitude})
+            found_airports.append({
+                'name':airport.name, 
+                'iata': airport.iata, 
+                'icao': airport.icao, 
+                'city':  airport.city, 
+                'country':airport.country, 
+                'latitude': airport.latitude, 
+                'longitude': airport.longitude
+            })
 
     cursor.close()
     conn.close()

@@ -4,6 +4,7 @@ import pytest
 import requests
 import json
 
+
 def test_search_name_lower_case_partial():
     response = requests.get('http://127.0.0.1:5000/api/name?name=tegel')
     assert response.status_code == 200

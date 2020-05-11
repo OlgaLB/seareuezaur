@@ -17,9 +17,10 @@ def populate_table(filename):
         filename : str
             Path to csv file.
     """
-    conn = mysql.connector.connect(user=Connection.MYSQL_USER, password=Connection.MYSQL_PASSWORD,
-                              host=Connection.MYSQL_HOST,
-                              database=Connection.MYSQL_DB)
+    conn = mysql.connector.connect(user=Connection.MYSQL_USER, 
+                                   password=Connection.MYSQL_PASSWORD,
+                                   host=Connection.MYSQL_HOST,
+                                   database=Connection.MYSQL_DB)
     cursor = conn.cursor()
     
     with open(filename, "r") as f_input:
@@ -28,7 +29,13 @@ def populate_table(filename):
         for row in csv_input:
             
             if row['iata_code'] != '':
-                airport = Airport(row['name'].replace("'", "\\'"), row['iata_code'].replace("'", "\\'"), row['ident'].replace("'", "\\'"), row['municipality'].replace("'", "\\'"), row['iso_country'].replace("'", "\\'"), row['latitude_deg'].replace("'", "\\'"), row['longitude_deg'].replace("'", "\\'"))
+                airport = Airport(row['name'].replace("'", "\\'"), 
+                                  row['iata_code'].replace("'", "\\'"), 
+                                  row['ident'].replace("'", "\\'"), 
+                                  row['municipality'].replace("'", "\\'"), 
+                                  row['iso_country'].replace("'", "\\'"), 
+                                  row['latitude_deg'].replace("'", "\\'"), 
+                                  row['longitude_deg'].replace("'", "\\'"))
                 query = f'INSERT INTO airports (name, iata, icao, city, country, latitude, longitude) VALUES (\'{airport.name}\', \'{airport.iata}\', \'{airport.icao}\', \'{airport.city}\', \'{airport.country}\', {airport.latitude}, {airport.longitude});'
                 cursor.execute(query)
 

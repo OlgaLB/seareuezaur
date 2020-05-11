@@ -4,6 +4,7 @@ import pytest
 import requests
 import json
 
+
 def test_search_iata_lower_case_full():
     response = requests.get('http://127.0.0.1:5000/api/IATA?iata=oca')
     assert response.status_code == 200

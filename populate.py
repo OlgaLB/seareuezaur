@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 
 import csv
-
 from lib.credentials import Connection
 import mysql.connector
-
-
 from lib.airport import Airport
 
 

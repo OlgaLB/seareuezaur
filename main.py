@@ -8,7 +8,10 @@ import mysql.connector
 
 if __name__ == "__main__":
     
-    conn = mysql.connector.connect(host=Connection.MYSQL_HOST, user=Connection.MYSQL_USER_ROOT, password = Connection.MYSQL_PASSWORD_ROOT, db = Connection.MYSQL_DB)
+    conn = mysql.connector.connect(host=Connection.MYSQL_HOST, 
+                                   user=Connection.MYSQL_USER_ROOT, 
+                                   password = Connection.MYSQL_PASSWORD_ROOT, 
+                                   db = Connection.MYSQL_DB)
     cursor = conn.cursor()
 
     queries_list = []

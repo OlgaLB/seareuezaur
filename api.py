@@ -3,7 +3,6 @@
 from lib.credentials import Connection
 from flask import Flask, request, json, jsonify
 import mysql.connector
-
 from lib.airport import Airport
 
 
@@ -97,5 +96,4 @@ def name_search():
 
 
 if __name__ == "__main__":
-    
     app.run()
